@@ -6,17 +6,20 @@ type Todo = {
   completed: boolean;
 };
 
-function TodoItem(props: { todo: Todo; onToggle: (id: number) => void }) {
+interface TodoItemProps {
+  todo: Todo;
+  onToggle: (id: number) => void;
+}
+
+function TodoItem({ todo, onToggle }: TodoItemProps) {
   return (
     <div class="flex items-center gap-2 p-2 border rounded">
       <input
         type="checkbox"
-        checked={props.todo.completed}
-        onChange={() => props.onToggle(props.todo.id)}
+        checked={todo.completed}
+        onChange={() => onToggle(todo.id)}
       />
-      <span class={props.todo.completed ? "line-through" : ""}>
-        {props.todo.text}
-      </span>
+      <span class={todo.completed ? "line-through" : ""}>{todo.text}</span>
     </div>
   );
 }
