@@ -12,9 +12,7 @@
     "solid-js": "^1.9.6"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.5",
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.3",
+    "@tailwindcss/vite": "^4.1.5",
     "tailwindcss": "^4.1.5",
     "typescript": "~5.7.2",
     "vite": "^6.3.1",
