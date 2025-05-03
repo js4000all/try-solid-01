@@ -1,10 +1,11 @@
-import { createSignal } from 'solid-js'
-import solidLogo from './assets/solid.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { createSignal } from 'solid-js';
+import solidLogo from './assets/solid.svg';
+import viteLogo from '/vite.svg';
+import './App.css';
+import TodoList from './components/TodoList'; // 新しく作成したコンポーネントをインポート
 
 function App() {
-  const [count, setCount] = createSignal(0)
+  const [count, setCount] = createSignal(0);
 
   return (
     <>
@@ -25,11 +26,12 @@ function App() {
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
+      <TodoList /> {/* TodoInputコンポーネントをここに追加 */}
       <p class="read-the-docs">
         Click on the Vite and Solid logos to learn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
